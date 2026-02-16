@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 965ac2876a19002499a5ff783269d54b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241337
+  packageName: Gaze Interaction System
+  packageVersion: 1.1.1
+  assetPath: Assets/GazeInteraction/Resources/Prefabs/gaze_reticle.prefab
+  uploadId: 659597

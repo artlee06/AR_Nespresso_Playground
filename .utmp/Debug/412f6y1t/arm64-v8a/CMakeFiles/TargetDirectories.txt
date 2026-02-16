@@ -1,0 +1,5 @@
+/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/.utmp/Debug/412f6y1t/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/.utmp/Debug/412f6y1t/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/.utmp/Debug/412f6y1t/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/.utmp/Debug/412f6y1t/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/.utmp/Debug/412f6y1t/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

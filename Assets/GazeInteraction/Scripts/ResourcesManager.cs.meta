@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0201c900566404d409797100bf615ad5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241337
+  packageName: Gaze Interaction System
+  packageVersion: 1.1.1
+  assetPath: Assets/GazeInteraction/Scripts/ResourcesManager.cs
+  uploadId: 659597

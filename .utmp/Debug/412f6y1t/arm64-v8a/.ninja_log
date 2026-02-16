@@ -1,0 +1,19 @@
+# ninja log v5
+1	1148	1771225896828045502	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	7a894b48154056aa
+2	1029	1771225896710199850	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	85cc228437cb4b63
+3	1009	1771225896689676764	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	862a4842b1f53b65
+1	971	1771225896652204210	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	9839725359751885
+2	937	1771225896619732688	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	5a18848ea2a649ab
+1148	1279	1771225896958779004	/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/412f6y1t/obj/arm64-v8a/libgame.so	d6bd941ae44651c5
+3	934	1771225896615851904	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	dfcd892485099862
+1	947	1771225896629361253	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6351c5c274861518
+2	876	1771225896555345144	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	aab763f5cc119d7b
+4	757	1771229099836718790	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	dfcd892485099862
+3	764	1771229099843732486	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	aab763f5cc119d7b
+4	769	1771229099850623270	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	5a18848ea2a649ab
+3	773	1771229099854087120	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6351c5c274861518
+3	787	1771229099867789068	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	9839725359751885
+5	871	1771229099951497769	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	862a4842b1f53b65
+4	889	1771229099968494699	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	85cc228437cb4b63
+2	901	1771229099979807708	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	7a894b48154056aa
+901	1023	1771229100102735167	/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/412f6y1t/obj/arm64-v8a/libgame.so	d6bd941ae44651c5

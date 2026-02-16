@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ea6985061a30cc6409bd7367dedf48da
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241337
+  packageName: Gaze Interaction System
+  packageVersion: 1.1.1
+  assetPath: Assets/GazeInteraction/license.txt
+  uploadId: 659597

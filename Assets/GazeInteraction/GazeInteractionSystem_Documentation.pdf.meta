@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 62905cfc58764944c8bc18abc8b8cd4f
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241337
+  packageName: Gaze Interaction System
+  packageVersion: 1.1.1
+  assetPath: Assets/GazeInteraction/GazeInteractionSystem_Documentation.pdf
+  uploadId: 659597

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 92e10773052cfe849a7ffb2a7a1045e1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 241337
+  packageName: Gaze Interaction System
+  packageVersion: 1.1.1
+  assetPath: Assets/GazeInteraction/Scripts/GazeInteractor.cs
+  uploadId: 659597
