@@ -7,6 +7,10 @@
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
 
+# OpenAI Configuration (contains API key)
+Assets/MetaXR/*ProviderProfile.asset
+Assets/MetaXR/*ProviderProfile.asset.meta
+
 # Never ignore Asset meta data
 ![Aa]ssets/**/*.meta
 
