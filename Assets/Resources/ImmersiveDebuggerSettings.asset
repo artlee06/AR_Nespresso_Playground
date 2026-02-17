@@ -25,15 +25,15 @@ MonoBehaviour:
   immersiveDebuggerDisplayAtStartup: 1
   enableOnlyInDebugBuild: 0
   showInspectors: 0
-  showConsole: 1
-  followOverride: 1
+  showConsole: 0
+  followOverride: 0
   rotateOverride: 0
   showInfoLog: 1
   showWarningLog: 1
   showErrorLog: 1
   collapsedIdenticalLogEntries: 0
   maximumNumberOfLogEntries: 1000
-  panelDistance: 1
+  panelDistance: 2
   createEventSystem: 1
   automaticLayerCullingUpdate: 1
   panelLayer: 20
