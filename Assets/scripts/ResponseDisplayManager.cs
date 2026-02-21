@@ -17,20 +17,25 @@ public class ResponseDisplayManager : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private GameObject responsePanel;
     [SerializeField] private TMP_Text responseText;
+    [SerializeField] private CanvasGroup canvasGroup;
     
     [Header("Database")]
     [SerializeField] private PodDatabase podDatabase;
     
     [Header("Settings")]
     [SerializeField] private float autoHideDuration = 10f;
+    [SerializeField] private float animDuration = 0.4f;
+    [SerializeField] private float riseDistance = 0.06f;
     
     private float hideTimer = 0f;
     private bool isPanelVisible = false;
+    private Vector3 targetLocalPosition;
     
     void Start()
     {
         if (responsePanel != null)
         {
+            targetLocalPosition = responsePanel.transform.localPosition;
             responsePanel.SetActive(false);
         }
     }
@@ -154,24 +159,43 @@ public class ResponseDisplayManager : MonoBehaviour
     
     public void HidePanel()
     {
-        if (responsePanel != null)
+        if (responsePanel != null && canvasGroup != null)
         {
-            responsePanel.SetActive(false);
+            // Cancel any existing tweens
+            LeanTween.cancel(responsePanel);
+            
             isPanelVisible = false;
+            LeanTween.alphaCanvas(canvasGroup, 0f, 0.2f).setOnComplete(() =>
+            {
+                responsePanel.SetActive(false);
+            });
         }
     }
+
     
     private void ShowPanel(string text)
     {
-        if (responsePanel == null || responseText == null)
+        if (responsePanel == null || responseText == null || canvasGroup == null)
         {
             Debug.LogError("[ResponseDisplayManager] Missing references!");
             return;
         }
         
+        // Cancel any existing tweens on this panel
+        LeanTween.cancel(responsePanel);
+        
         responseText.text = text;
+        
+        canvasGroup.alpha = 0f;
+        Vector3 startLocalPosition = targetLocalPosition - new Vector3(0f, riseDistance, 0f);
+        responsePanel.transform.localPosition = startLocalPosition;
+        
         responsePanel.SetActive(true);
         isPanelVisible = true;
         hideTimer = 0f;
+        
+        LeanTween.alphaCanvas(canvasGroup, 1f, animDuration).setEase(LeanTweenType.easeOutCubic);
+        LeanTween.moveLocal(responsePanel, targetLocalPosition, animDuration).setEase(LeanTweenType.easeOutCubic);
     }
+
 }

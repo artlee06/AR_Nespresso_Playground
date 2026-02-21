@@ -2855,8 +2855,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ResponseDisplayManager
   responsePanel: {fileID: 1343789858}
   responseText: {fileID: 1987255352}
+  canvasGroup: {fileID: 1343789865}
   podDatabase: {fileID: 637037323}
   autoHideDuration: 10
+  animDuration: 0.8
+  riseDistance: 0.1
 --- !u!4 &464314693
 Transform:
   m_ObjectHideFlags: 0
@@ -9741,6 +9744,7 @@ GameObject:
   - component: {fileID: 1343789860}
   - component: {fileID: 1343789859}
   - component: {fileID: 1343789864}
+  - component: {fileID: 1343789865}
   m_Layer: 3
   m_Name: ResponsePanel
   m_TagString: Untagged
@@ -9874,6 +9878,18 @@ MonoBehaviour:
   target: {fileID: 1207047366}
   shouldInvert: 1
   rotationOffset: {x: 0, y: 0, z: 0}
+--- !u!225 &1343789865
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343789858}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1344067203
 GameObject:
   m_ObjectHideFlags: 0
