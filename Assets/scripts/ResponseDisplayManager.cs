@@ -119,11 +119,11 @@ public class ResponseDisplayManager : MonoBehaviour
     {
         string stars = GenerateStars(rating);
         
-        return $"<b><size=54>{pod.pod_name} </size></b>" +
+        return $"<size=54>{pod.pod_name} </size>" +
                $"<size=36>By {pod.maker}</size>\n" +
-               $"<size=42>{stars}</size>\n" +
-               $"<b><size=42>Intensity:</size></b> <size=42>{pod.intensity}/13</size>\n" +
-               $"<size=38>{pod.description}</size>";
+               $"<size=42>Intensity:<space=0.5em></size><b><size=42>{pod.intensity}/13</size></b>\n" +
+               $"<size=42>Your Rating:<space=1em></size><size=42>{stars}</size>\n" +
+               $"<size=36>{pod.description}</size>";
     }
     
     private string GenerateStars(float rating)
@@ -133,23 +133,20 @@ public class ResponseDisplayManager : MonoBehaviour
         
         string result = "";
         
-        // Filled stars
         for (int i = 0; i < fullStars; i++)
         {
-            result += "*";
+            result += "<sprite name=\"star-fill\">";
         }
         
-        // Half star
         if (hasHalfStar)
         {
-            result += "*";
+            result += "<sprite name=\"star-half-fill\">";
         }
         
-        // Empty stars
         int emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
         for (int i = 0; i < emptyStars; i++)
         {
-            result += "-";
+            result += "<sprite name=\"star-line\">";
         }
         
         return result;

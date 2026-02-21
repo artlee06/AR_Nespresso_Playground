@@ -1,10 +1,10 @@
 # ninja log v5
-1	722	1771321023755770609	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	5a18848ea2a649ab
-0	726	1771321023758241614	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6351c5c274861518
-1	727	1771321023760498411	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	aab763f5cc119d7b
-2	745	1771321023781491169	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	dfcd892485099862
-0	756	1771321023792883612	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	9839725359751885
-2	809	1771321023845623734	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	862a4842b1f53b65
-1	866	1771321023901993282	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	85cc228437cb4b63
-0	899	1771321023933603856	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	7a894b48154056aa
-899	1014	1771321024050061085	/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/412f6y1t/obj/arm64-v8a/libgame.so	d6bd941ae44651c5
+1	770	1771661124179974514	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6351c5c274861518
+2	774	1771661124179208516	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	5a18848ea2a649ab
+1	775	1771661124185086544	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	aab763f5cc119d7b
+2	811	1771661124221752251	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	dfcd892485099862
+1	837	1771661124248865105	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	9839725359751885
+3	848	1771661124259121664	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	862a4842b1f53b65
+2	906	1771661124316070491	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	85cc228437cb4b63
+0	948	1771661124356795521	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	7a894b48154056aa
+948	1066	1771661124475133956	/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/412f6y1t/obj/arm64-v8a/libgame.so	d6bd941ae44651c5
