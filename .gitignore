@@ -38,6 +38,12 @@ Assets/MetaXR/*ProviderProfile.asset.meta
 # Unity3D generated file on crash reports
 sysinfo.txt
 
+# Mono crash dumps
+mono_crash.*.json
+
+# Unity temp build artifacts (.utmp)
+.utmp/
+
 # Builds
 *.apk
 *.aab
