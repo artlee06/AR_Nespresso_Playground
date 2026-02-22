@@ -12,7 +12,6 @@ Library: /Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Play
 --float-mode=Fast
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/Temp/Burst
---debug=Full
 --key-folder=/Applications/Unity/Hub/Editor/6000.3.7f1/PlaybackEngines/AndroidPlayer
 --decode-folder=/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/Library/Burst
 --output=/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
@@ -31,7 +30,6 @@ Library: /Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Play
 --target-framework=NetFramework
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/Temp/Burst
---debug=Full
 --key-folder=/Applications/Unity/Hub/Editor/6000.3.7f1/PlaybackEngines/AndroidPlayer
 --decode-folder=/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/Library/Burst
 --output=/Users/arthurlee/Desktop/Experimentation/AR Nespresso/AR_Nespresso_Playground/Temp/BurstOutput/tempburstlibs/arm64-v8a/lib_burst_generated
