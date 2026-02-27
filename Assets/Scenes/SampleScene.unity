@@ -2834,6 +2834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 464314693}
   - component: {fileID: 464314692}
+  - component: {fileID: 464314694}
   m_Layer: 0
   m_Name: ResponseDisplayManager
   m_TagString: Untagged
@@ -2858,11 +2859,13 @@ MonoBehaviour:
   canvasGroup: {fileID: 1343789865}
   backgroundImage: {fileID: 1743614465}
   shimmerMaterial: {fileID: 2100000, guid: 8b7cb32746261487c9f9c60a494fca44, type: 2}
-  responseMaterial: {fileID: 2100000, guid: 6bd132c3d438f47f9b87f609076da9d9, type: 2}
+  responseMaterial: {fileID: 2100000, guid: bf2d8dabc8bd34445950310de28e153b, type: 2}
+  staticResponseMaterial: {fileID: 2100000, guid: 6bd132c3d438f47f9b87f609076da9d9, type: 2}
   podDatabase: {fileID: 637037323}
-  autoHideDuration: 10
+  autoHideDuration: 12
   animDuration: 0.8
   riseDistance: 0.1
+  opticalCenterOffset: 10
 --- !u!4 &464314693
 Transform:
   m_ObjectHideFlags: 0
@@ -2878,6 +2881,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &464314694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464314691}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1b4de1239e44d9da586e2e5a06bee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PassthroughBlur
+  passthroughCamera: {fileID: 674432671}
+  panelMaterial: {fileID: 2100000, guid: 1832b86253d6a480792a79de57eb0c91, type: 2}
+  blurMaterial: {fileID: 2100000, guid: dcf679aa931514913951e9d10e1c3ef4, type: 2}
+  blurIterations: 3
+  blurSpread: 1.5
 --- !u!1 &466854508
 GameObject:
   m_ObjectHideFlags: 0
@@ -12022,7 +12042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 2100000, guid: 8b7cb32746261487c9f9c60a494fca44, type: 2}
+  m_Material: {fileID: 2100000, guid: bf2d8dabc8bd34445950310de28e153b, type: 2}
   m_Color: {r: 0, g: 0, b: 0, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -12030,7 +12050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 1
   m_FillCenter: 1

@@ -15,6 +15,8 @@ public class PodResponse
 
 public class ResponseDisplayManager : MonoBehaviour
 {
+    // [SerializeField] private PassthroughBlur passthroughBlur;
+    
     [Header("UI References")]
     [SerializeField] private GameObject responsePanel;
     [SerializeField] private TMP_Text responseText;
@@ -24,6 +26,7 @@ public class ResponseDisplayManager : MonoBehaviour
     [Header("Materials")]
     [SerializeField] private Material shimmerMaterial;
     [SerializeField] private Material responseMaterial;
+    [SerializeField] private Material staticResponseMaterial;
 
     [Header("Database")]
     [SerializeField] private PodDatabase podDatabase;
@@ -32,17 +35,26 @@ public class ResponseDisplayManager : MonoBehaviour
     [SerializeField] private float autoHideDuration = 10f;
     [SerializeField] private float animDuration = 0.4f;
     [SerializeField] private float riseDistance = 0.06f;
+    [Tooltip("Shifts centered text upward for optical centering (positive = up)")]
+    [SerializeField] private float opticalCenterOffset = 20f;
     
     private float hideTimer = 0f;
     private bool isPanelVisible = false;
     private Vector3 targetLocalPosition;
-    
+    private TextAlignmentOptions originalAlignment;
+    private Vector4 originalMargin;
+
     void Start()
     {
         if (responsePanel != null)
         {
             targetLocalPosition = responsePanel.transform.localPosition;
             responsePanel.SetActive(false);
+        }
+        if (responseText != null)
+        {
+            originalAlignment = responseText.alignment;
+            originalMargin = responseText.margin;
         }
     }
     
@@ -63,11 +75,23 @@ public class ResponseDisplayManager : MonoBehaviour
     {
         Debug.Log("[ResponseDisplayManager] Showing loading...");
         backgroundImage.material = shimmerMaterial;
+        // passthroughBlur.enabled = true;
+        LeanTween.cancel(gameObject);
+        responseText.alignment = TextAlignmentOptions.Center;
+        responseText.margin = new Vector4(originalMargin.x, originalMargin.y, originalMargin.z, originalMargin.w + opticalCenterOffset);
         ShowPanel("Analyzing pod...");
     }
-    
+
+    private void ScheduleGlowSettle()
+    {
+        LeanTween.cancel(gameObject);
+        LeanTween.delayedCall(gameObject, 2.5f, () => backgroundImage.material = staticResponseMaterial);
+    }
+
     public void ShowResponse(string response)
     {
+        responseText.alignment = originalAlignment;
+        responseText.margin = originalMargin;
         Debug.Log($"[ResponseDisplayManager] Raw response: {response}");
         
         // Clean response
@@ -82,17 +106,19 @@ public class ResponseDisplayManager : MonoBehaviour
             if (!podData.detected || string.IsNullOrEmpty(podData.pod_name))
             {
                 backgroundImage.material = responseMaterial;
+                ScheduleGlowSettle();
                 ShowPanel("Unknown Pod\nTry Again");
                 return;
             }
-            
+
             // Lookup personal rating
             PodData myData = podDatabase?.GetPodRating(podData.pod_name);
             float rating = myData?.personalRating ?? 0f;
-            
+
             // Format display
             string displayText = FormatPodDisplay(podData, rating);
             backgroundImage.material = responseMaterial;
+            ScheduleGlowSettle();
             ShowPanel(displayText);
         }
         catch (Exception e)
@@ -100,6 +126,7 @@ public class ResponseDisplayManager : MonoBehaviour
             Debug.LogError($"[ResponseDisplayManager] JSON parse error: {e.Message}");
             Debug.LogError($"[ResponseDisplayManager] Response was: {cleanedResponse}");
             backgroundImage.material = responseMaterial;
+            ScheduleGlowSettle();
             // Show raw response for debugging
             ShowPanel(cleanedResponse);
         }
@@ -133,11 +160,6 @@ public class ResponseDisplayManager : MonoBehaviour
     private string FormatPodDisplay(PodResponse pod, float rating)
     {
         string stars = GenerateStars(rating);
-        
-        // Title: 73pt (Bold)
-    // By-line/Labels: 45pt (Regular)
-    // Intensity Value: 45pt (Bold)
-    // Body: 28pt (Regular)
     
     return $"<size=73>{pod.pod_name}</size><size=45> by {pod.maker}</size>\n" +
            $"<size=0>\u200B</size>\n" + // gap: group 1 → 2
@@ -180,12 +202,15 @@ public class ResponseDisplayManager : MonoBehaviour
         {
             // Cancel any existing tweens
             LeanTween.cancel(responsePanel);
+            LeanTween.cancel(gameObject);
             
             isPanelVisible = false;
             LeanTween.alphaCanvas(canvasGroup, 0f, 0.2f).setOnComplete(() =>
             {
                 responsePanel.SetActive(false);
+                // passthroughBlur.enabled = false;
             });
+
         }
     }
 
