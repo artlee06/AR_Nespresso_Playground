@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System;
 
@@ -18,7 +19,12 @@ public class ResponseDisplayManager : MonoBehaviour
     [SerializeField] private GameObject responsePanel;
     [SerializeField] private TMP_Text responseText;
     [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private Image backgroundImage;
     
+    [Header("Materials")]
+    [SerializeField] private Material shimmerMaterial;
+    [SerializeField] private Material responseMaterial;
+
     [Header("Database")]
     [SerializeField] private PodDatabase podDatabase;
     
@@ -56,6 +62,7 @@ public class ResponseDisplayManager : MonoBehaviour
     public void ShowLoading()
     {
         Debug.Log("[ResponseDisplayManager] Showing loading...");
+        backgroundImage.material = shimmerMaterial;
         ShowPanel("Analyzing pod...");
     }
     
@@ -74,6 +81,7 @@ public class ResponseDisplayManager : MonoBehaviour
             
             if (!podData.detected || string.IsNullOrEmpty(podData.pod_name))
             {
+                backgroundImage.material = responseMaterial;
                 ShowPanel("Unknown Pod\nTry Again");
                 return;
             }
@@ -84,12 +92,14 @@ public class ResponseDisplayManager : MonoBehaviour
             
             // Format display
             string displayText = FormatPodDisplay(podData, rating);
+            backgroundImage.material = responseMaterial;
             ShowPanel(displayText);
         }
         catch (Exception e)
         {
             Debug.LogError($"[ResponseDisplayManager] JSON parse error: {e.Message}");
             Debug.LogError($"[ResponseDisplayManager] Response was: {cleanedResponse}");
+            backgroundImage.material = responseMaterial;
             // Show raw response for debugging
             ShowPanel(cleanedResponse);
         }
@@ -124,11 +134,18 @@ public class ResponseDisplayManager : MonoBehaviour
     {
         string stars = GenerateStars(rating);
         
-        return $"<size=54>{pod.pod_name} </size>" +
-               $"<size=36>By {pod.maker}</size>\n" +
-               $"<size=42>Intensity:<space=0.5em></size><b><size=42>{pod.intensity}/13</size></b>\n" +
-               $"<size=42>Your Rating:<space=1em></size><size=42>{stars}</size>\n" +
-               $"<size=36>{pod.description}</size>";
+        // Title: 73pt (Bold)
+    // By-line/Labels: 45pt (Regular)
+    // Intensity Value: 45pt (Bold)
+    // Body: 28pt (Regular)
+    
+    return $"<size=73>{pod.pod_name}</size><size=45> by {pod.maker}</size>\n" +
+           $"<size=0>\u200B</size>\n" + // gap: group 1 → 2
+           $"<line-height=85%>" +
+           $"<size=45>Intensity: <b>{pod.intensity}/13</b></size>\n" +
+           $"<size=45>Your Rating: </size><space=0.5em><size=45>{stars}</size>\n" +
+        //    $"<size=0>\u200B</size>\n" + // gap: group 2 → 3
+           $"<line-height=32px><size=28>{pod.description}</size>";
     }
     
     private string GenerateStars(float rating)

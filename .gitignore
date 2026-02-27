@@ -44,6 +44,9 @@ mono_crash.*.json
 # Unity temp build artifacts (.utmp)
 .utmp/
 
+# Burst compiler debug output (auto-generated, not for distribution)
+*BurstDebugInformation_DoNotShip/
+
 # Builds
 *.apk
 *.aab

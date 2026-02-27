@@ -2856,6 +2856,9 @@ MonoBehaviour:
   responsePanel: {fileID: 1343789858}
   responseText: {fileID: 1987255352}
   canvasGroup: {fileID: 1343789865}
+  backgroundImage: {fileID: 1743614465}
+  shimmerMaterial: {fileID: 2100000, guid: 8b7cb32746261487c9f9c60a494fca44, type: 2}
+  responseMaterial: {fileID: 2100000, guid: 6bd132c3d438f47f9b87f609076da9d9, type: 2}
   podDatabase: {fileID: 637037323}
   autoHideDuration: 10
   animDuration: 0.8
@@ -4894,19 +4897,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userInput: "You are identifying a Nespresso coffee pod.  Look for TWO identifying
-    features: 1. TEXT on the silver/aluminum cap (pod name is printed here) 2. BODY
-    COLOR of the cylindrical pod (below the cap)  Common Nespresso Original pods:
-    - Tokyo Lungo: YELLOW/BRIGHT GOLD body, intensity 8, \"Tokyo Lungo\" on cap -
-    Kazaar: DARK NAVY/BLUE body, intensity 12, \"Kazaar\" on cap - Arpeggio: DARK
-    PURPLE body, intensity 9, \"Arpeggio\" on cap - Volluto: LIGHT GOLD/BEIGE body,
-    intensity 4, \"Volluto\" on cap - India: DARK GREEN body, intensity 11, \"India\"
-    on cap  IDENTIFICATION PRIORITY: 1. If you can read text on the cap \u2192 use
-    that for pod name 2. If text is unclear \u2192 use body color to identify 3.
-    Use both together for confidence  Return ONLY valid JSON (no markdown): {   \"detected\":
-    true,   \"pod_name\": \"Tokyo Lungo\",   \"maker\": \"Nespresso\",   \"intensity\":
-    8,   \"description\": \"Floral and fruity with a smooth finish\" }  If you cannot
-    identify the pod: {   \"detected\": false,   \"pod_name\": \"Unknown\" }  CRITICAL:
-    Combine cap text + body color for best accuracy."
+    features:  1. TEXT on the silver/aluminum cap (pod name is printed here)  2.
+    BODY COLOR of the cylindrical pod (below the cap)    Common Nespresso Original
+    pods:  - Tokyo Lungo: LIGHT BLUE WITH FLOWERS body, intensity 8, \"Tokyo Lungo\"
+    on cap  - Kazaar: DARK NAVY/BLUE body, intensity 12, \"Kazaar\" on cap  - Arpeggio:
+    DARK PURPLE body, intensity 9, \"Arpeggio\" on cap  - Volluto: LIGHT GOLD/BEIGE
+    body, intensity 4, \"Volluto\" on cap - India: LIGHT GREEN/OLIVE body, intensity
+    11, \"India\" on cap   - Capriccio: DARK GREEN body, intensity 5, \"Capricco\"
+    on cap    IDENTIFICATION PRIORITY: 1. If you can read text on the cap \u2192
+    use that for pod name 2. If text is unclear \u2192 use body color to identify
+    3. Use both together for confidence  Return ONLY valid JSON (no markdown): {  
+    \"detected\": true,   \"pod_name\": \"Tokyo Lungo\",   \"maker\": \"Nespresso\",  
+    \"intensity\": 8,   \"description\": \"Floral and fruity with a smooth finish\"
+    }  If you cannot identify the pod: {   \"detected\": false,   \"pod_name\": \"Unknown\"
+    }  CRITICAL: Combine cap text + body color for best accuracy."
   selectedPrompt: 0
   includeImage: 1
   imageSource: 0
@@ -5459,7 +5463,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.3, z: 0.17}
-  m_Center: {x: 0, y: -0.2, z: 0.3}
+  m_Center: {x: 0, y: -0.25, z: 0.3}
 --- !u!1 &672823727
 GameObject:
   m_ObjectHideFlags: 0
@@ -9861,7 +9865,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 700, y: 400}
+  m_SizeDelta: {x: 820, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343789864
 MonoBehaviour:
@@ -12018,8 +12022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 2100000, guid: 6bd132c3d438f47f9b87f609076da9d9, type: 2}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.70980394}
+  m_Material: {fileID: 2100000, guid: 8b7cb32746261487c9f9c60a494fca44, type: 2}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

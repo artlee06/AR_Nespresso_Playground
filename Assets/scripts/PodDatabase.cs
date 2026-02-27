@@ -15,6 +15,8 @@ public class PodDatabase : MonoBehaviour
         new PodData { name = "Tokyo Lungo", personalRating = 3.0f, notes = "Good for mornings" },
         new PodData { name = "Kazaar", personalRating = 5.0f, notes = "Too intense for me" },
         new PodData { name = "Arpeggio", personalRating = 4.0f, notes = "Smooth and balanced" },
+        new PodData { name = "Capriccio", personalRating = 3.0f, notes = "Not a fan" },
+        new PodData { name = "India", personalRating = 4.0f, notes = "Not bad" },
         // Add more as you own them
     };
     
